@@ -1,5 +1,15 @@
+import { observable, makeObservable, action } from "mobx";
+
 class PlayPauseState {
     PPState = false;
+
+    constructor() {
+        makeObservable(this, {
+            PPState: observable,
+            setPlayState: action,
+            setPauseState: action,
+        });
+    }
 
     setPlayState() {
         this.PPState = true;
@@ -9,4 +19,4 @@ class PlayPauseState {
         this.PPState = false;
     }
 }
-export default PlayPauseState;
+export const playPauseStateStore = new PlayPauseState();

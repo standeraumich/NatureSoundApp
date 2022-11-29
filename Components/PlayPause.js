@@ -3,16 +3,27 @@ import { Pressable, Image, View } from "react-native";
 import Styles from "./Styles";
 
 class PlayPause extends Component {
+    pressablePressed() {
+        console.log("pressable pressed");
+    }
+
     render() {
         return (
-            <Pressable>
-                <View style={Styles.playPauseView}>
-                    <Image
-                        style={Styles.playPauseIcon}
-                        source={require("../assets/play-button-arrowhead.png")}
-                    />
-                </View>
-            </Pressable>
+            <View style={Styles.playPauseView}>
+                <Pressable
+                    style={Styles.playPausePressable}
+                    onPress={() => {
+                        this.pressablePressed();
+                    }}
+                >
+                    <View>
+                        <Image
+                            style={Styles.playPauseIcon}
+                            source={require("../assets/play-button-arrowhead.png")}
+                        />
+                    </View>
+                </Pressable>
+            </View>
         );
     }
 }

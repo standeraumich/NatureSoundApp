@@ -3,46 +3,58 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
-        alignItems: "center",
-        justifyContent: "center",
         backgroundColor: "#43a1c9",
+        justifyContent: "center",
+        alignContent: "flex-end",
     },
-    dynamicBackgroundImage:{
-      flex:1,
-      justifyContent:'center'
-    },
-    playPause: {
-        flex: 2,
-    },
-    playPauseView: {
-        backgroundColor: "#f0a2a2",
-        width: "80%",
-    },
-    playPauseIcon: {
-        padding: 10,
-        resizeMode: "contain",
-        width: 150,
-        height: 150,
-    },
-    addNoiseSlider: {
+    dynamicBackgroundImage: {
         flex: 1,
+        justifyContent: "center",
+        alignContent: "center",
+    },
+    headerView: {
+        flex: 1,
+        justifyContent: "center",
+        alignContent: "center",
+    },
+
+    playPauseView: {
+        flex: 2,
+        alignContent: "center",
+        justifyContent: "center",
     },
     sliderView: {
+        flex: 2.5,
         flexDirection: "row",
-        backgroundColor: "#ffffff",
-        width: "80%",
+        justifyContent: "center",
+        alignContent: "center",
+        padding: 20,
     },
-    icon: {
+    header: {
+        fontSize: 28,
+        textAlign: "center",
+    },
+    playPausePressable: {
+        alignSelf: "center",
+    },
+    playPauseIcon: {
+        alignSelf: "center",
+        resizeMode: "contain",
+        width: 115,
+        height: 115,
+    },
+
+    addNoiseIcon: {
+        alignSelf: "center",
         padding: 10,
         flex: 1,
-        width: 50,
-        height: 50,
+        width: 40,
+        height: 40,
         resizeMode: "contain",
     },
     slider: {
+        alignSelf: "center",
         padding: 10,
         flex: 3,
-        width: 300,
     },
 });
