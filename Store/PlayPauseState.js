@@ -1,22 +1,22 @@
 import { observable, makeObservable, action } from "mobx";
 
 class PlayPauseState {
-    PPState = false;
+    PPState = true;
+    PPImage = require('../assets/play-button-arrowhead.png')
 
     constructor() {
         makeObservable(this, {
             PPState: observable,
-            setPlayState: action,
-            setPauseState: action,
+            PPImage: observable,
+            setState: action,
         });
     }
 
-    setPlayState() {
-        this.PPState = true;
+    setState(stateBool) {
+        console.log('inside setState ' + stateBool)
+        this.PPImage = stateBool ? require('../assets/pause.png') : require('../assets/play-button-arrowhead.png');
+        this.PPState = stateBool;
     }
 
-    setPauseState() {
-        this.PPState = false;
-    }
 }
 export const playPauseStateStore = new PlayPauseState();

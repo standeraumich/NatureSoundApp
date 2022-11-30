@@ -1,28 +1,38 @@
 import React, { Component } from "react";
 import { Pressable, Image, View } from "react-native";
 import Styles from "./Styles";
+import PlayPauseCommand from "../Commands/PlayPauseCommand";
+import { playPauseStateStore } from "../Store/PlayPauseState";
+import CommandManager from "../Commands/CommandManager";
+import { Observer } from "mobx-react";
 
 class PlayPause extends Component {
-    pressablePressed() {
-        console.log("pressable pressed");
-    }
+    manager = new CommandManager();
 
     render() {
         return (
             <View style={Styles.playPauseView}>
-                <Pressable
-                    style={Styles.playPausePressable}
-                    onPress={() => {
-                        this.pressablePressed();
-                    }}
-                >
-                    <View>
-                        <Image
-                            style={Styles.playPauseIcon}
-                            source={require("../assets/play-button-arrowhead.png")}
-                        />
-                    </View>
-                </Pressable>
+                <Observer>
+                    {() => (
+                        <Pressable
+                            style={Styles.playPausePressable}
+                            onPress={() => {
+                                this.manager.execute(
+                                    new PlayPauseCommand(
+                                        playPauseStateStore.PPState
+                                    )
+                                );
+                            }}
+                        >
+                            <View>
+                                <Image
+                                    style={Styles.playPauseIcon}
+                                    source={playPauseStateStore.PPImage}
+                                />
+                            </View>
+                        </Pressable>
+                    )}
+                </Observer>
             </View>
         );
     }

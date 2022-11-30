@@ -3,3 +3,4 @@ class Command{
         this.execute = execute;
     }
 }
+export default Command;
