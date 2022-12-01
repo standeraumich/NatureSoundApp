@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Pressable, Image, View } from "react-native";
 import Styles from "./Styles";
-import PlayPauseCommand from "../Commands/PlayPauseCommand";
-import { playPauseStateStore } from "../Store/PlayPauseState";
+import PlayPauseCommand from "../Commands/PlayPauseMainCommand";
 import CommandManager from "../Commands/CommandManager";
+import { playPauseStore } from "../Store/PlayPauseStore";
 import { Observer } from "mobx-react";
 
 class PlayPause extends Component {
@@ -18,16 +18,14 @@ class PlayPause extends Component {
                             style={Styles.playPausePressable}
                             onPress={() => {
                                 this.manager.execute(
-                                    new PlayPauseCommand(
-                                        playPauseStateStore.PPState
-                                    )
+                                    new PlayPauseCommand()
                                 );
                             }}
                         >
                             <View>
                                 <Image
                                     style={Styles.playPauseIcon}
-                                    source={playPauseStateStore.PPImage}
+                                    source={playPauseStore.playPauseImage}
                                 />
                             </View>
                         </Pressable>

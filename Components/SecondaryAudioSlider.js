@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import Slider from "@react-native-community/slider";
 import { Image, View } from "react-native";
 import Styles from "./Styles";
-import { addNoiseStateStore } from "../Store/AddNoiseState";
+import { secondarySliderStore } from "../Store/SecondarySliderStore";
 import { Observer } from "mobx-react";
 
-class AddNoiseSlider extends Component {
+class SecondaryAudioSlider extends Component {
     render() {
         return (
             <View style={Styles.sliderView}>
@@ -20,9 +20,9 @@ class AddNoiseSlider extends Component {
                             minimumValue={0}
                             maximumValue={100}
                             step={1}
-                            value={addNoiseStateStore.NoiseLevel}
+                            value={secondarySliderStore.volumeLevel}
                             onValueChange={(value) =>
-                                addNoiseStateStore.setNoiseLevel(value)
+                                secondarySliderStore.setVolumeLevel(value)
                             }
                             maximumTrackTintColor="white"
                             minimumTrackTintColor="white"
@@ -35,4 +35,4 @@ class AddNoiseSlider extends Component {
     }
 }
 
-export default AddNoiseSlider;
+export default SecondaryAudioSlider;
