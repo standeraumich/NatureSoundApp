@@ -2,7 +2,7 @@ import { observable, makeObservable, action } from "mobx";
 
 class AudioSecondaryStore {
     audioObject = null;
-    audioFile = require("../Tracks/addNoiseTrack.wav");
+    audioFile = "https://feeds.soundcloud.com/stream/1394989690-steve-anderau-naturesoundappaudiosecondaryfinal.mp3"
 
     constructor() {
         makeObservable(this, {

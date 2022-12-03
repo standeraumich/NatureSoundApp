@@ -6,7 +6,9 @@ class AudioManager {
             audioStore.setAudioObject({});
             console.log("Loading Sound");
             const { sound } = await Audio.Sound.createAsync(
-                audioStore.audioFile,
+                {
+                    uri: audioStore.audioFile,
+                },
                 {
                     shouldPlay: true,
                     isLooping: true,
@@ -15,10 +17,9 @@ class AudioManager {
 
             audioStore.setAudioObject(sound);
             objectStateStore.setPlayPauseState(true);
-        }
-        if (
+        } else if (
             !objectStateStore.playPauseState &&
-            audioStore.audioObject != null && 
+            audioStore.audioObject != null &&
             Object.keys(audioStore.audioObject).length != 0
         ) {
             objectStateStore.setPlayPauseState(true);

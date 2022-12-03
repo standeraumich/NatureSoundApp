@@ -38,7 +38,8 @@ class SecondaryAudioSlider extends Component {
                             disabled={!playPauseStore.playPauseState}
                             maximumTrackTintColor="white"
                             minimumTrackTintColor="white"
-                            thumbTintColor="white"
+                            thumbImage={require('../assets/thumbImage.png')}
+
                         />
                     )}
                 </Observer>

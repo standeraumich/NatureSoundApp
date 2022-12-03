@@ -15,7 +15,6 @@ class SecondarySliderStore {
 
     setVolumeLevel(level) {
         this.volumeLevel = level;
-        console.log(level)
     }
 
     setPlayPauseState(stateBool) {

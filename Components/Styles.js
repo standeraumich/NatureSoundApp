@@ -46,15 +46,14 @@ export default StyleSheet.create({
 
     addNoiseIcon: {
         alignSelf: "center",
-        padding: 10,
+        marginLeft:20,
         flex: 1,
-        width: 40,
-        height: 40,
+        width: 60,
+        height: 60,
         resizeMode: "contain",
     },
     slider: {
         alignSelf: "center",
-        padding: 10,
         flex: 3,
     },
 });

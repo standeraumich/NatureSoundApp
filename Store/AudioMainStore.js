@@ -2,7 +2,7 @@ import { observable, makeObservable, action } from "mobx";
 
 class AudioMainStore {
     audioObject = null;
-    audioFile = require("../Tracks/track.wav");
+    audioFile = "https://feeds.soundcloud.com/stream/1394982667-steve-anderau-naturesoundappaudiomain.mp3";
 
     constructor() {
         makeObservable(this, {
