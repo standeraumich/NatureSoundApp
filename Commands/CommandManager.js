@@ -1,3 +1,4 @@
+// Manages any command calls
 class CommandManager{
 
     execute(command, ...args){

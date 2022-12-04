@@ -1,5 +1,6 @@
 import { Audio } from "expo-av";
 
+// AudioManager handles all audio loading, playing and pausing
 class AudioManager {
     async playSound(audioStore, objectStateStore) {
         if (audioStore.audioObject == null) {

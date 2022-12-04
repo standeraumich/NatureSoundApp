@@ -1,12 +1,7 @@
 import { StyleSheet } from "react-native";
 
+// Styling for the entire application
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#43a1c9",
-        justifyContent: "center",
-        alignContent: "flex-end",
-    },
     dynamicBackgroundImage: {
         flex: 1,
         justifyContent: "center",
@@ -16,12 +11,14 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignContent: "center",
+        marginTop:20,
     },
 
     playPauseView: {
         flex: 2,
         alignContent: "center",
         justifyContent: "center",
+        marginBottom:40,
     },
     sliderView: {
         flex: 2.5,
@@ -29,10 +26,6 @@ export default StyleSheet.create({
         justifyContent: "center",
         alignContent: "center",
         padding: 20,
-    },
-    header: {
-        fontSize: 28,
-        textAlign: "center",
     },
     playPausePressable: {
         alignSelf: "center",
@@ -54,6 +47,7 @@ export default StyleSheet.create({
     },
     slider: {
         alignSelf: "center",
+        marginLeft:20,
         flex: 3,
     },
 });

@@ -7,6 +7,8 @@ import CommandManager from "../Commands/CommandManager";
 import { playPauseStore } from "../Store/PlayPauseStore";
 import { Observer } from "mobx-react";
 
+// PlayPause is a component that holds the pressable 
+// play pause button
 class PlayPause extends Component {
     manager = new CommandManager();
 

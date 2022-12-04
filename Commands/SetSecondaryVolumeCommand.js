@@ -2,6 +2,9 @@ import Command from "./Command";
 import { secondarySliderStore } from "../Store/SecondarySliderStore";
 import { audioSecondaryStore } from "../Store/AudioSecondaryStore";
 
+// SetSecondaryVolumeCommand will change the volume 
+// of the secondary audio based on the volume level store
+// when it is called
 export default function SetSecondaryVolumeCommand() {
     return new Command(() => {
         if (

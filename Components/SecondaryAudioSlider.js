@@ -9,6 +9,8 @@ import PlayPauseSecondaryCommand from "../Commands/PlayPauseSecondaryCommand";
 import SetSecondaryVolumeCommand from "../Commands/SetSecondaryVolumeCommand";
 import CommandManager from "../Commands/CommandManager";
 
+// SecondaryAudioSlider is a component that holds the 
+// Secondary audio slider and the secondary audio icon
 class SecondaryAudioSlider extends Component {
     manager = new CommandManager();
     render() {

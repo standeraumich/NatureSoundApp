@@ -1,5 +1,6 @@
 import { observable, makeObservable, action } from "mobx";
 
+// AudioMainStore store audio data pertaining to the main audio
 class AudioMainStore {
     audioObject = null;
     audioFile = "https://feeds.soundcloud.com/stream/1394982667-steve-anderau-naturesoundappaudiomain.mp3";

@@ -4,6 +4,8 @@ import { audioSecondaryStore } from "../Store/AudioSecondaryStore";
 import { playPauseStore } from "../Store/PlayPauseStore";
 import audioManager from "../Services/AudioManager";
 
+// PlayPauseSecondaryCommand will pause or play the secondary 
+// audio based on the secondary audio store
 export default function PlayPauseSecondaryCommand() {
     return new Command(() => {
         if (
