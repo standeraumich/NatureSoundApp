@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { View, ImageBackground, SliderComponent } from "react-native";
+import { View, ImageBackground } from "react-native";
 import SecondaryAudioSlider from "./Components/SecondaryAudioSlider";
 import PlayPause from "./Components/PlayPause";
 import Header from "./Components/Header";
