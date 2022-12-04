@@ -10,7 +10,7 @@ import { userDataStore } from "../Store/UserDataStore";
 // Runs commands pertaining to time specific data / style
 class IntervalService {
     manager = new CommandManager();
-    intervalWaitTime = 20000;
+    intervalWaitTime = 4000;
     datesAreTheSame(first, second) {
         return (
             first.getFullYear() === second.getFullYear() &&

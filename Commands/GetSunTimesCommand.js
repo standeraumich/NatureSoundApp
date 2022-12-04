@@ -12,8 +12,10 @@ export default function GetSunTimes() {
         }
 
         async function getSunTimes() {
+            today = new Date().toLocaleDateString('sv')
+            console.log(today)
             await fetch(
-                `https://api.sunrise-sunset.org/json?lat=${userDataStore.userLat}&lng=${userDataStore.userLong}&formatted=0`
+                `https://api.sunrise-sunset.org/json?lat=${userDataStore.userLat}&lng=${userDataStore.userLong}&date=${today}&formatted=0`
             )
                 .then((res) => res.json())
                 .then((data) => {
