@@ -4,7 +4,7 @@ import { observable, makeObservable, action } from "mobx";
 class PlayPauseStore {
     playPauseState = false;
     playPauseImage = require("../assets/playButtonWhite.png");
-    isDay = false;
+    isDay = null;
 
     constructor() {
         makeObservable(this, {
