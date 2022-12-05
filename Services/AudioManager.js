@@ -24,7 +24,7 @@ class AudioManager {
             Object.keys(audioStore.audioObject).length != 0
         ) {
             objectStateStore.setPlayPauseState(true);
-            console.log("playing sound");
+            console.log("Playing Sound");
             await audioStore.audioObject.playAsync();
         }
     }

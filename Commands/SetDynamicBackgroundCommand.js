@@ -7,16 +7,13 @@ import Command from "./Command";
 // on the time specific store data
 export default function SetDynamicBackground() {
     return new Command(() => {
+        console.log('SetDynamicBackground command executed')
         function setDynamicBackground() {
             // Need to fix the logic here. Think of before midnight and after midnight logic
-            console.log("in setdynamic background");
-            console.log(playPauseStore.isDay)
             datetime = new Date();
-            console.log(datetime.toString())
             sunriseAfterMidnight = userDataStore.userSunrise
             sunsetEndBeforeMidnight = userDataStore.userSunsetEnd
             sunriseBeforeMidnight = new Date(sunriseAfterMidnight.getTime() + 86400000)
-            console.log(sunriseBeforeMidnight.toString())
             sunsetEndAfterMidnight = new Date(sunsetEndBeforeMidnight.getTime() - 86400000)
             //Night time before midnight
             if (
@@ -28,7 +25,7 @@ export default function SetDynamicBackground() {
                 sunStore.setHeaderColor("white")
                 playPauseStore.setIsDay(false);
                 playPauseStore.setPlayPauseState(playPauseStore.playPauseState);
-                console.log("its nightime before midnight");
+                console.log("It is currently nighttime");
             } // Night time after midnight
             else if (
                 datetime > sunsetEndAfterMidnight &&
@@ -39,7 +36,7 @@ export default function SetDynamicBackground() {
                 sunStore.setHeaderColor("white")
                 playPauseStore.setIsDay(false);
                 playPauseStore.setPlayPauseState(playPauseStore.playPauseState);
-                console.log("its nightime after midnight");
+                console.log("It is currently nighttime");
             }// Day time
             else if (
                 datetime > userDataStore.userSunriseEnd &&
@@ -50,7 +47,7 @@ export default function SetDynamicBackground() {
                 sunStore.setHeaderColor("black")
                 playPauseStore.setIsDay(true);
                 playPauseStore.setPlayPauseState(playPauseStore.playPauseState);
-                console.log("its daytime");
+                console.log("It is currently daytime");
             }
         }
         setDynamicBackground();

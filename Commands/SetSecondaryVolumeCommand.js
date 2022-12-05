@@ -7,6 +7,7 @@ import { audioSecondaryStore } from "../Store/AudioSecondaryStore";
 // when it is called
 export default function SetSecondaryVolumeCommand() {
     return new Command(() => {
+        console.log('SetSecondaryVolume command executed')
         if (
             audioSecondaryStore.audioObject != null &&
             Object.keys(audioSecondaryStore.audioObject).length != 0

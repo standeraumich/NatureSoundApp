@@ -7,6 +7,7 @@ import audioManager from "../Services/AudioManager";
 // audio based on the main audio store
 export default function PlayPauseMainCommand() {
     return new Command(() => {
+        console.log('PlayPause command executed')
         if (!playPauseStore.playPauseState) {
             audioManager.playSound(audioMainStore, playPauseStore);
         } else {

@@ -34,7 +34,7 @@ export default function App() {
         intervalService.startInterval();
     }, []);
 
-    console.log("app main render");
+    console.log("In App main render");
     // Create main app ui
     return (
         <>

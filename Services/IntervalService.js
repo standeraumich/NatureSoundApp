@@ -20,11 +20,10 @@ class IntervalService {
     }
 
     async startInterval() {
-        console.log("interval service started");
+        console.log("Interval Service Started");
         const interval = await setInterval(() => {
             date = new Date();
             currentSunrise = userDataStore.userSunrise;
-            console.log(date.toString());
             // Check if a new day has happened, if so run sun api call
             if (!this.datesAreTheSame(date, currentSunrise)) {
                 this.manager.execute(new GetSolsticeOrEquinox());

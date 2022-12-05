@@ -14,6 +14,7 @@ import CommandManager from "../Commands/CommandManager";
 class SecondaryAudioSlider extends Component {
     manager = new CommandManager();
     render() {
+        console.log('SecondaryAudioSlider component rendered')
         return (
             <View style={Styles.sliderView}>
                 <Image

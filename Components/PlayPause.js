@@ -13,6 +13,7 @@ class PlayPause extends Component {
     manager = new CommandManager();
 
     render() {
+        console.log('PlayPause component rendered')
         return (
             <View style={Styles.playPauseView}>
                 <Observer>

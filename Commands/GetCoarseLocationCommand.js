@@ -6,16 +6,16 @@ import * as Location from 'expo-location'
 // and saves it to userDataStore data if granted
 export default function GetCoarseLocation() {
     return new Command(() => {
+        console.log("GetCoarseLocation command executed")
         async function getUserLocation() {
             let {status} = await Location.requestForegroundPermissionsAsync()
             if(status == 'granted'){
-                console.log('Permission successful!')
+                console.log('Location Permission Granted')
             }else{
-                console.log('Permission not granted')
+                console.log('Location Permission not Granted')
             }
 
             const loc = await Location.getCurrentPositionAsync()
-            console.log(loc)
             userDataStore.setUserLat(loc.coords.latitude)
             userDataStore.setUserLong(loc.coords.longitude)
           }

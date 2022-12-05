@@ -6,6 +6,7 @@ import Command from "./Command";
 // solstice when called
 export default function GetSolsticeOrEquinox() {
     return new Command(() => {
+        console.log('GetSolticeOrEquinox command executed')
         marchEq = sunStore.equinoxMarch
         juneSol = sunStore.solsticeJune
         septEq = sunStore.equinoxSept
@@ -42,7 +43,6 @@ export default function GetSolsticeOrEquinox() {
                 sunStore.setSolsticeOrEquinox('solstice')
             }
 
-            console.log(sunStore.solsticeOrEquinox)
         }
         getSolsticeOrEquinox();
     });

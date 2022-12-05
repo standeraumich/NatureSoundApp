@@ -7,6 +7,7 @@ import Command from "./Command";
 // sun store data when its called
 export default function GetSunTimes() {
     return new Command(() => {
+        console.log('GetSunTimes command executed')
         function convertToRad(deg){
             return (Math.PI / 180) * deg;
         }
@@ -22,7 +23,7 @@ export default function GetSunTimes() {
                     userDataStore.setUserSunrise(data.results.sunrise);
                     userDataStore.setUserSunset(data.results.sunset);
                     userDataStore.setUserSolarNoon(data.results.solar_noon);
-                    console.log(data);
+                    console.log("Sunrise and sunset data acquired");
                 })
                 .catch((err) => console.log(err));
             // Sunrise/set durations calculated from

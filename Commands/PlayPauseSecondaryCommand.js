@@ -8,6 +8,7 @@ import audioManager from "../Services/AudioManager";
 // audio based on the secondary audio store
 export default function PlayPauseSecondaryCommand() {
     return new Command(() => {
+        console.log('PlayPauseSecondary command executed')
         if (
             secondarySliderStore.volumeLevel != 0.0 &&
             playPauseStore.playPauseState

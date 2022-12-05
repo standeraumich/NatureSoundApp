@@ -41,17 +41,14 @@ class UserDataStore {
 
     setUserSunrise(time) {
         this.userSunrise = new Date(time);
-        console.log(this.userSunrise.toString());
     }
 
     setUserSunset(time) {
         this.userSunset = new Date(time);
-        console.log(this.userSunset.toString());
     }
 
     setUserSolarNoon(time) {
         this.userSolarNoon = new Date(time);
-        console.log(this.userSolarNoon.toString());
     }
 
     setUserSunriseEnd(seconds){

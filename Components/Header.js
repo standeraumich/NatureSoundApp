@@ -7,7 +7,9 @@ import { sunStore } from "../Store/SunStore";
 // Header holds the header text component in 
 // the application
 class Header extends Component {
+    
     render() {
+        console.log('Header component rendered');
         return (
             <View style={Styles.headerView}>
                 <Observer>
